@@ -1,0 +1,56 @@
+@mixin flex-center {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.apartmentDetails {
+    background-color: #ffffff !important;
+}
+
+.apartmentHero {
+    @include flex-center();
+
+    background-image: url("../../Utility/images/hero-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    h2 {
+        letter-spacing:1px;
+        font-weight: 600;
+    }
+}
+
+.apartmentImg {
+    width: 100%;
+    height: 376px;
+}
+
+.apartmentTitle {
+    @include flex-center();
+    justify-content: space-between;
+
+    h2 {
+        font-weight: 700;
+    }
+}
+
+.shortSummary, .priceDetails, .propertyDetails {
+    color: #747474;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.apartmentForm {
+    background-color: #F4F4F4;
+}
+
+.apartment-submit-btn {
+    border: none;
+}
+.apartment-submit-btn:focus {
+    outline: none;
+}

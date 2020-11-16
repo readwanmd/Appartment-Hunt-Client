@@ -1,0 +1,16 @@
+.sidebar li {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+.sidebar li :hover span {
+  display: inline-block;
+  margin-left: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.sidebar svg {
+  margin-right: 5px;
+}
+/*# sourceMappingURL=AdminDashboard.css.map */

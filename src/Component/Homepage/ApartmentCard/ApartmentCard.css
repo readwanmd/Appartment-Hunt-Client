@@ -1,0 +1,38 @@
+.apartmentCard-img {
+  height: 209px;
+}
+
+.card {
+  border: none;
+}
+
+.details {
+  color: #747474;
+}
+
+.bed-bath {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.details-btn .brand-btn {
+  padding: 10px 15px !important;
+}
+/*# sourceMappingURL=ApartmentCard.css.map */

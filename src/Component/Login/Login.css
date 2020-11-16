@@ -1,0 +1,39 @@
+.form {
+  border-radius: 5px;
+}
+
+.loginForm input {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  border-radius: 0px;
+  padding-left: 0;
+}
+
+.loginForm input:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.special-login-btns button {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+}
+
+#googleLogin {
+  background-image: url("../../Utility/logos/Google.png");
+}
+/*# sourceMappingURL=Login.css.map */

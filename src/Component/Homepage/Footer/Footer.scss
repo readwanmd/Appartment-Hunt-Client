@@ -1,0 +1,23 @@
+.footerArea {
+    background-color: #275A53 ;
+}
+
+.company ul, .quickLinks ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 3px 0;
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    }
+    
+}
+
+.links {
+    justify-content: space-around;
+}

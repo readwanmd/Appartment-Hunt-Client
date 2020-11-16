@@ -1,0 +1,24 @@
+.footerArea {
+  background-color: #275A53;
+}
+
+.company ul, .quickLinks ul {
+  margin: 0;
+  padding: 0;
+}
+
+.company ul li, .quickLinks ul li {
+  list-style: none;
+  padding: 3px 0;
+}
+
+.company ul li a, .quickLinks ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.links {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/*# sourceMappingURL=Footer.css.map */

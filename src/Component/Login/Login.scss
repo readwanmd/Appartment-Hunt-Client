@@ -1,0 +1,31 @@
+.form {
+	border-radius: 5px;
+}
+
+.loginForm input {
+	border: none;
+	border-bottom: 1px solid #dddddd;
+	border-radius: 0px;
+	padding-left: 0;
+}
+
+.loginForm input:focus {
+	outline: none !important;
+	box-shadow: none;
+}
+
+.special-login-btns button {
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	display: flex;
+	align-items: center;
+	border-radius: 25px;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: contain;
+	justify-content: center;
+	background-color: #ffffff;
+}
+
+#googleLogin {
+	background-image: url('../../Utility/logos/Google.png');
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,QAAQ,CAAC,EAAE,CAAA;EACP,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,GAAG;CAMrB;;AARD,AAGI,QAHI,CAAC,EAAE,CAGP,MAAM,CAAC,IAAI,CAAA;EACP,OAAO,EAAE,YAAY;EACrB,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,GAChB;CAAC;;AAEL,AAAA,QAAQ,CAAC,GAAG,CAAA;EACR,YAAY,EAAE,GAAG;CACpB",
+    "sources": [
+        "AdminDashboard.scss"
+    ],
+    "names": [],
+    "file": "AdminDashboard.css"
+}

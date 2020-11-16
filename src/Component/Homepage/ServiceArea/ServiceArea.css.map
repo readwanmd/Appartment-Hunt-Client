@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACnB;;AAED,AAAA,qBAAqB,CAAC;EAClB,KAAK,EAAE,OAAO;CACjB",
+    "sources": [
+        "ServiceArea.scss"
+    ],
+    "names": [],
+    "file": "ServiceArea.css"
+}

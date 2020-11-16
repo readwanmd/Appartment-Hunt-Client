@@ -1,0 +1,12 @@
+.nav-item {
+    margin-left: 10px;
+}
+
+.header-btn a {
+    @include brand-btn();
+    margin-left: 10px;
+}
+
+// .navbar {
+//     flex-wrap: nowrap;
+// }
