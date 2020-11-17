@@ -11,7 +11,7 @@ const ServiceArea = () => {
             <SectionTitle shortTitle={"Service"} longTitle1={"We're an agency tailored to all"} longTitle2={"clients' needs that always delivers"}></SectionTitle>
 
             <div className="row mb-5 pb-4">
-                <div className="col-md-6 col-lg-4 my-3">
+                <div className="col-md-6 col-lg-4 my-3 singleServiceCard py-3">
                     <div class="card brand-bg text-center">
                         <img class="card-img-top w-25 mx-auto" src={service1} alt="" />
                         <div class="card-body">
@@ -20,7 +20,7 @@ const ServiceArea = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 my-3">
+                <div className="col-md-6 col-lg-4 my-3 singleServiceCard py-3">
                     <div class="card brand-bg text-center">
                         <img class="card-img-top w-25 mx-auto" src={service2} alt="" />
                         <div class="card-body">
@@ -29,7 +29,7 @@ const ServiceArea = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 col-lg-4 my-3">
+                <div className="col-md-6 col-lg-4 my-3 singleServiceCard py-3">
                     <div class="card brand-bg text-center">
                         <img class="card-img-top w-25 mx-auto" src={service3} alt="" />
                         <div class="card-body">

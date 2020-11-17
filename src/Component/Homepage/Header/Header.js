@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Header.css';
 import logo from '../../../Utility/logos/Logo.png';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Header = () => {
+	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	return (
 		<div className="bg-white">
 			<div className="container">
@@ -30,11 +32,11 @@ const Header = () => {
 									Home <span className="sr-only">(current)</span>
 								</Link>
 							</li>
-							<li className="nav-item active">
-								<Link to="/about" className="nav-link">
+							{/* <li className="nav-item active">
+								<Link to="#" className="nav-link">
 									About <span className="sr-only">(current)</span>
 								</Link>
-							</li>
+							</li> */}
 							{/* <li className="nav-item active">
 								<Link to="/service" className="nav-link">
 									Service <span className="sr-only">(current)</span>
@@ -50,16 +52,26 @@ const Header = () => {
 										Event <span className="sr-only">(current)</span>
 									</Link>
 								</li> */}
-							<li className="nav-item active">
-								<Link to="/contact" className="nav-link" href="#">
+							{/* <li className="nav-item active">
+								<Link to="#" className="nav-link">
 									Contact <span className="sr-only">(current)</span>
 								</Link>
-							</li>
-							<li className="header-btn">
-								<Link to="/login" className="nav-link" href="/login">
-									Login
+							</li> */}
+							{
+								loggedInUser.email ? <li className="header-btn">
+									<Link to="/dashboard" className="nav-link">
+										Dashboard <span className="sr-only">(current)</span>
+									</Link>
+								</li> : ""
+							}
+
+							{
+								loggedInUser.email ? "" : <li className="header-btn">
+									<Link to="/login" className="nav-link">
+										Login
 								</Link>
-							</li>
+								</li>
+							}
 						</ul>
 					</div>
 				</nav>

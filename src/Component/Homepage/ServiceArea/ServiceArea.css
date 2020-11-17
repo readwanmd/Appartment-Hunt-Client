@@ -6,4 +6,25 @@
 .service-card-details {
   color: #606268;
 }
+
+.singleServiceCard img {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.singleServiceCard {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.singleServiceCard:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.singleServiceCard:hover {
+  -webkit-box-shadow: 0px 0px 20px #dddddd;
+          box-shadow: 0px 0px 20px #dddddd;
+  border-radius: 5px;
+}
 /*# sourceMappingURL=ServiceArea.css.map */

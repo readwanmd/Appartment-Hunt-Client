@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from '../Homepage/Header/Header';
 import './ApartmentDetails.css';
+import BookingForm from './BookingForm';
 
 const ApartmentDetails = () => {
 	const { id } = useParams();
@@ -29,10 +30,14 @@ const ApartmentDetails = () => {
 						<div className="col-md-8">
 							<img
 								className="img-fluid apartmentImg"
-								src={apartment.imgMain}
+								src={
+									typeof apartment.imgMain == 'string'
+										? apartment.imgMain
+										: `data:image/png;base64,${apartment.imgMain.img}`
+								}
 								alt=""
 							/>
-							<div className="title brand-color">
+							<div className="title brand-color apartment-heading">
 								<h2 className="appTitle py-3 mt-3">{apartment.appName}</h2>
 								<p className="price m-0 ">${apartment.price}</p>
 							</div>
@@ -65,44 +70,7 @@ const ApartmentDetails = () => {
 						</div>
 						<div className="col-md-4">
 							<div className="apartmentForm px-3 py-4">
-								<form>
-									<div class="form-group">
-										<input
-											type="name"
-											class="form-control"
-											id="name"
-											aria-describedby="name"
-											placeholder="Full Name"
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="tel"
-											class="form-control"
-											id="phone"
-											aria-describedby="phone"
-											placeholder="Phone Number"
-										/>
-									</div>
-									<div class="form-group">
-										<input
-											type="email"
-											class="form-control"
-											id="email"
-											aria-describedby="email"
-											placeholder="Enter email"
-										/>
-									</div>
-									<div class="form-group">
-										<textarea rows="5" class="form-control"></textarea>
-									</div>
-									<button
-										type="submit"
-										class="brand-btn apartment-submit-btn w-100"
-									>
-										Submit
-									</button>
-								</form>
+								<BookingForm appName={apartment.appName} price={apartment.price} address={apartment.address} id={id} />
 							</div>
 						</div>
 					</div>

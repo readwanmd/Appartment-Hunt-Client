@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import Header from '../Homepage/Header/Header';
 import './Login.css';
 
@@ -10,6 +10,10 @@ import firebaseConfig from './firebase.config';
 
 const Login = () => {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+	const history = useHistory();
+	const location = useLocation();
+	const { from } = location.state || { from: { pathname: "/" } };
 	if (firebase.apps.length === 0) {
 		firebase.initializeApp(firebaseConfig);
 	}
@@ -49,9 +53,9 @@ const Login = () => {
 					const { email } = res.user;
 					const signedInUser = { email };
 					setLoggedInUser(signedInUser);
-					// history.replace(from);
+					storeAuthToken()
+					history.replace(from);
 					e.target.reset();
-					alert('Login successful.');
 				})
 				.catch((error) => {
 					const newUser = { ...user };
@@ -68,14 +72,25 @@ const Login = () => {
 			.auth()
 			.signInWithPopup(provider)
 			.then((res) => {
-				const { displayName, email } = res.user;
-				const signedInUser = { name: displayName, email };
+				const { displayName, email, photoURL } = res.user;
+				const signedInUser = { name: displayName, email, photo: photoURL };
 				setLoggedInUser(signedInUser);
+				storeAuthToken()
+				history.replace(from);
 			})
 			.catch((err) => {
 				alert(err.message);
 			});
 	};
+
+	const storeAuthToken = () => {
+		firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+			.then(function (idToken) {
+				sessionStorage.setItem('token', idToken)
+			}).catch(function (error) {
+				// Handle error
+			});
+	}
 	return (
 		<div>
 			<Header></Header>

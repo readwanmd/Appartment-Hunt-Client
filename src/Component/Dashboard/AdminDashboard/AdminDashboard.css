@@ -13,4 +13,8 @@
 .sidebar svg {
   margin-right: 5px;
 }
+
+.dashboardBody {
+  background-color: #F5F6FA !important;
+}
 /*# sourceMappingURL=AdminDashboard.css.map */

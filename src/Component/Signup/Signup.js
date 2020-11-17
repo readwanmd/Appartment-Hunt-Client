@@ -75,8 +75,8 @@ const Signup = () => {
 			.auth()
 			.signInWithPopup(provider)
 			.then((res) => {
-				const { displayName, email } = res.user;
-				const signedInUser = { name: displayName, email };
+				const { displayName, email, photoURL } = res.user;
+				const signedInUser = { name: displayName, email, photo: photoURL };
 				setLoggedInUser(signedInUser);
 			})
 			.catch((err) => {

@@ -1,12 +1,26 @@
 import { faHome, faPlus, faServer, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Utility/logos/Logo.png'
+import firebase from "firebase/app";
+import "firebase/auth";
+import { UserContext } from '../../../App';
+
 
 const AdminSidebar = () => {
     const logoStyle = {
         width: "100px"
+    }
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const signOut = () => {
+        firebase.auth().signOut().then(function () {
+            setLoggedInUser({})
+            sessionStorage.removeItem("userToken");
+            sessionStorage.clear();
+        }).catch(function (error) {
+            // An error happened.
+        });
     }
     return (
         <div className="col-md-2 pl-5">
@@ -34,7 +48,7 @@ const AdminSidebar = () => {
                 </ul>
             </div>
             <div>
-                <Link to="" className="text-danger"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
+                <Link to="" className="text-danger" onClick={signOut}><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
             </div>
         </div>
     );

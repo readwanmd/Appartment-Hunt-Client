@@ -8,6 +8,8 @@
     background-color: #ffffff !important;
 }
 
+
+
 .apartmentHero {
     @include flex-center();
 
@@ -27,9 +29,10 @@
     height: 376px;
 }
 
-.apartmentTitle {
+.apartment-heading {
     @include flex-center();
-    justify-content: space-between;
+    justify-content: space-between !important;
+    flex-wrap: wrap;
 
     h2 {
         font-weight: 700;

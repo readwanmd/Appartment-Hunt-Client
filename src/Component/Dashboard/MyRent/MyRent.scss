@@ -1,0 +1,13 @@
+.dashboardTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-btn {
+    transition: .2s
+}
+.action-btn:hover {
+    text-decoration: none;
+    color: #71C2B7;
+}

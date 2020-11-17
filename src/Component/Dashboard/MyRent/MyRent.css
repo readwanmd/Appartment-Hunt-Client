@@ -1,0 +1,22 @@
+.dashboardTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.action-btn {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.action-btn:hover {
+  text-decoration: none;
+  color: #71C2B7;
+}
+/*# sourceMappingURL=MyRent.css.map */
