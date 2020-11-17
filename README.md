@@ -1,3 +1,5 @@
+# Appartment Hunt - An apartment booking SPA
+
 Apartment Hunt is a MERN stack house rental service provider single page application with responsive user interface.
 
 ## Features
